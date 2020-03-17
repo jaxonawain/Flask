@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>Register</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="static/default.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Please register</h1>
+      <br>
+      <form action="/account_creation" method="POST">
+        <input type="text" placeholder="Username" name="username" value="{{ request.form.username }}">
+         <input type="password" placeholder="Password" name="secret" value="{{ request.form.secret }}">
+         <input type="text" placeholder="First Name" name="first_name" value="{{ request.form.first_name }}">
+         <input type="text" placeholder="Last Name" name="last_name" value="{{ request.form.last_name }}">
+        <input class="btn btn-default" type="submit" value="register">
+      </form>
+      <p>Or go home:</p>
+      <a href="/">Home</a>
+      {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}
+      {% endif %}
+    </div>
+  </body>
+</html>

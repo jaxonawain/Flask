@@ -8,13 +8,15 @@
     <div class="container">
       <h1>Please login</h1>
       <br>
-      <form action="/login" method="POST">
+      <form action="/auth" method="POST">
         <input type="text" placeholder="Username" name="username" value="{{
           request.form.username }}">
-         <input type="password" placeholder="Password" name="password" value="{{
-          request.form.password }}">
+         <input type="password" placeholder="Password" name="secret" value="{{
+          request.form.secret }}">
         <input class="btn btn-default" type="submit" value="Login">
       </form>
+      <p>Or Register:</p>
+      <a href="/register">Register here</a>
       {% if error %}
         <p class="error"><strong>Error:</strong> {{ error }}
       {% endif %}
