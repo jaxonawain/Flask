@@ -1,0 +1,2 @@
+sudo docker build -t flask_app -f ~/Documents/Projects/flask_app/Dockerfiles/Dockerfile .
+

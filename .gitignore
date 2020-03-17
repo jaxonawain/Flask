@@ -1,0 +1,8 @@
+__pycache__
+venv
+.idea
+start_docker_container
+Misc
+testing.py
+conf.yml
+
